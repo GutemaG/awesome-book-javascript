@@ -28,13 +28,13 @@ bookList.classList.add('books');
 function displayBooks() {
   bookList.innerHTML = '';
   if (books.length) {
-    books.forEach((book) => {
+    books.forEach((book, index) => {
       const list = document.createElement('li');
       list.classList.add('book');
       list.innerHTML = `
         <p class='book-title'> ${book.title} </p>
         <p class='book-author'> ${book.author} </p>
-        <button class='btn remove' onClick="removeBook(${book.id})"> Remove </button>
+        <button class='btn remove' onClick="removeBook(${index})"> Remove </button>
         <hr class='separator'>
       `;
       bookList.appendChild(list);
@@ -45,8 +45,8 @@ function displayBooks() {
 }
 
 // eslint-disable-next-line no-unused-vars
-function removeBook(id) {
-  books = books.filter((book) => book.id !== id);
+function removeBook(index) {
+  books = books.filter((book, bookIndex) => index !== bookIndex);
   localStorage.setItem('data', JSON.stringify(books));
   displayBooks();
 }
@@ -70,16 +70,18 @@ app.appendChild(addBookForm);
 function CreateBookObject(title, author) {
   this.title = title;
   this.author = author;
-  this.id = books.length + 1;
+}
+
+function addBook(title, author) {
+  const newBookObject = new CreateBookObject(title, author);
+  books.push(newBookObject);
 }
 
 addBookForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = addBookForm.title.value;
   const author = addBookForm.author.value;
-
-  const newBookObject = new CreateBookObject(title, author);
-  books.push(newBookObject);
+  addBook(title, author);
   noBookExistMessage.style.display = 'none';
   displayBooks();
   localStorage.setItem('data', JSON.stringify(books));
