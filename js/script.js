@@ -4,7 +4,15 @@ const headerText = document.createElement('h1');
 headerText.innerText = 'Awesome Books';
 app.appendChild(headerText);
 
-let books = [];
+let books = [ {title:'title', author: 'author', id:1} ]
+function getData() {
+  const data = JSON.parse(localStorage.getItem('data'));
+
+  if (data) {
+    books = data;
+  }
+}
+getData();
 
 const bookList = document.createElement('ul');
 bookList.classList.add('books');
@@ -38,10 +46,10 @@ const addBookForm = document.createElement('form');
 addBookForm.setAttribute('id', 'add-book-form');
 addBookForm.innerHTML = `
   <div>
-    <input type="text" name="title" required placeholder='Enter Book Title'/>
+    <input type="text" name="title" id="title" required placeholder='Enter Book Title'/>
   </div>
   <div>
-    <input type="text" name="author" required placeholder='Enter Book Author'/>
+    <input type="text" name="author" id="author" required placeholder='Enter Book Author'/>
   </div>
   <input type="submit" value="Add" class='submit'>
 `;
@@ -61,6 +69,7 @@ addBookForm.addEventListener('submit', (event) => {
   const newBookObject = new CreateBookObject(title, author);
   books.push(newBookObject);
   displayBooks();
+  localStorage.setItem('data', JSON.stringify(books));
   addBookForm.title.value = '';
   addBookForm.author.value = '';
 });

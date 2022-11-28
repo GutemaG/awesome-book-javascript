@@ -57,11 +57,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Awesome Books <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**Awesome Books** is a wireframe for a digital library for simple addition and removal of bo
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -202,17 +202,17 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Birhanu**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
+- GitHub: [@githubhandle](https://github.com/gutemaG)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/birhanugudisa/)
 
-👤 **Author2**
+👤 **Cisco**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Cisco-the-wayword)
+- Twitter: [@twitterhandle](https://twitter.com/the_wayword)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/Adegboyega-Boluwatife/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
