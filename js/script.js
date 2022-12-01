@@ -184,7 +184,7 @@ navItems.forEach((n) => {
 const footerContainer = document.createElement('footer');
 footerContainer.classList.add('footer');
 footerContainer.innerHTML = `
-  <p>@copywrite</p>
+  <p>@copywrite Microverse 2022</p>
 `;
 
 app.appendChild(footerContainer);
